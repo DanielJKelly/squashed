@@ -8,3 +8,5 @@ services:
   - mysql
 before_install:
   - mysql -u root < test/database-spec/travis.sql
+
+

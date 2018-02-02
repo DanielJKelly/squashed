@@ -21,6 +21,7 @@ describe('test database', () => {
       }
     });
 
+
     /* Empty the db table before each test so that multiple tests
      * (or repeated runs of the tests) won't screw each other up: */
     // also reset auto increment
