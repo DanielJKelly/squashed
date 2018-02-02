@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS codeop;
-CREATE DATABASE codeop;
+DROP DATABASE IF EXISTS test;
+CREATE DATABASE test;
 
-USE codeop;
+USE test;
 
 -- USE heroku_a9ded5de1ff1c8b;
 
@@ -25,12 +25,3 @@ CREATE TABLE projects (
   user_id int,
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
-
-/*mysql --host=DB_HOST --user=DB_USER--password=DB_PASS --reconnect DB_NAME < schema.sql
-
-/* Create other tables and define schemas for them here! */
-
-/*  Execute this file from the command line (from database folder)by typing:
- *    mysql -u root < schema.sql
- *  to create the database and the tables.*/
-
