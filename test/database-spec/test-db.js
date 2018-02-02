@@ -11,7 +11,7 @@ describe('codeOp database', () => {
   beforeEach((done) => {
     dbConnection = mysql.createConnection({
       user: 'root',
-      database: 'test',
+      database: 'codeop',
     });
     dbConnection.connect((err) => {
       if (err) {
