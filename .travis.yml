@@ -7,4 +7,4 @@ cache:
 services:
   - mysql
 before_install:
-  - mysql -e 'CREATE DATABASE IF NOT EXISTS codeop;'
+  - mysql -u root < test/database-spec/travis.sql

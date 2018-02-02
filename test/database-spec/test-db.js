@@ -5,13 +5,13 @@ const model = require('../../database/model.js');
 const dbIndex = require('../../database/index.js');
 
 
-describe('codeOp database', () => {
+describe('test database', () => {
   let dbConnection;
 
   beforeEach((done) => {
     dbConnection = mysql.createConnection({
       user: 'root',
-      database: 'codeop',
+      database: 'test',
     });
     dbConnection.connect((err) => {
       if (err) {
@@ -24,8 +24,8 @@ describe('codeOp database', () => {
     /* Empty the db table before each test so that multiple tests
      * (or repeated runs of the tests) won't screw each other up: */
     // also reset auto increment
-    dbConnection.query('TRUNCATE projects', () => {
-      dbConnection.query('ALTER TABLE projects AUTO_INCREMENT = 1', done);
+    dbConnection.query('TRUNCATE users', () => {
+      dbConnection.query('ALTER TABLE users AUTO_INCREMENT = 1', done);
     });
   });
 
@@ -51,8 +51,6 @@ describe('codeOp database', () => {
   //       });
   //     });
   // });
-
-
 
   it('Should add user info to the users schema', (done) => {
     const userProfile = {
