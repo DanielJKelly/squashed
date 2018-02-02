@@ -6,3 +6,5 @@ cache:
     - node_modules
 services:
   - mysql
+before_install:
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS test;'
